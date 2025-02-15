@@ -104,7 +104,7 @@ struct players {
 
         //sound jump
 
-        jumpp.loadFromFile("jump.wav");
+        jumpp.loadFromFile("assets/sounds/jump.wav");
         jump.setBuffer(jumpp);
 
 
@@ -115,7 +115,7 @@ struct players {
         player2.sprite1.setPosition(1800, 950);
 
         //sound 
-        jumpp.loadFromFile("jump.wav");
+        jumpp.loadFromFile("assets/sounds/jump.wav");
         jump.setBuffer(jumpp);
 
     };
@@ -198,7 +198,7 @@ struct Ground {
     Texture GroundTexture;
     Sprite GroundSprite;
     Ground() {
-        ground.GroundTexture.loadFromFile("ground2.png");
+        ground.GroundTexture.loadFromFile("assets/images/ground2.png");
         ground.GroundSprite.setTexture(ground.GroundTexture);
         ground.GroundSprite.setPosition(0, 1030);
         ground.GroundSprite.setColor(Color(0, 0, 0, 0));
@@ -350,42 +350,42 @@ struct SoundManager {
     int sound_value = 50;
 
     bool initialize() {
-        if (!soundbuffer[2].loadFromFile("random.wav")) {
+        if (!soundbuffer[2].loadFromFile("assets/sounds/random.wav")) {
             cout << "ERROR: Can't load random menu.wav\n";
             return false;
         }
         sound_small[2].setBuffer(soundbuffer[2]);
-        if (!soundbuffer[0].loadFromFile("clik.wav")) {
+        if (!soundbuffer[0].loadFromFile("assets/sounds/clik.wav")) {
             cout << "ERROR: Can't load clik.wav\n";
             return false;
         }
         sound_small[0].setBuffer(soundbuffer[0]);
-        if (!soundbuffer[1].loadFromFile("clik.wav"))
+        if (!soundbuffer[1].loadFromFile("assets/sounds/clik.wav"))
         {
             cout << "ERROR: Can't load typing.wav\n";
             return false;
         }
         sound_small[1].setBuffer(soundbuffer[1]);
 
-        if (!sound[0].openFromFile("sound menu.wav")) {
+        if (!sound[0].openFromFile("assets/sounds/sound menu.wav")) {
             cout << "ERROR: Can't load sound menu.wav\n";
             return false;
         }
-        if (!unmutedTexture.loadFromFile("unmute.png")) {
+        if (!unmutedTexture.loadFromFile("assets/images/unmute.png")) {
             cout << "ERROR: Can't load unmute.png\n";
             return false;
         }
         unmuteSprite.setTexture(unmutedTexture);
         unmuteSprite.setPosition(5, 20);
         unmuteSprite.scale(1.5, 1.5);
-        if (!mutedTexture1.loadFromFile("mute2.png")) {
+        if (!mutedTexture1.loadFromFile("assets/images/mute2.png")) {
             cout << "ERROR: Can't load unmute.png\n";
             return false;
         }
         muteSprite1.setTexture(mutedTexture1);
         muteSprite1.setPosition(5, 20);
         muteSprite1.scale(1.5, 1.5);
-        if (!mutedTexture2.loadFromFile("mute1.png"))
+        if (!mutedTexture2.loadFromFile("assets/images/mute1.png"))
         {
             cout << "ERROR: Can't load unmute.png\n";
             return false;
@@ -394,7 +394,7 @@ struct SoundManager {
         muteSprite2.setPosition(5, 20);
         muteSprite2.scale(1.5, 1.5);
 
-        if (!mutedTexture.loadFromFile("mute.png"))
+        if (!mutedTexture.loadFromFile("assets/images/mute.png"))
         {
             cout << "ERROR: Can't load mute.png\n";
             return false;
@@ -402,61 +402,61 @@ struct SoundManager {
         muteSprite.setTexture(mutedTexture);
         muteSprite.setPosition(5, 20);
         muteSprite.scale(1.5, 1.5);
-        if (!sound[1].openFromFile("egy map sound .wav"))
+        if (!sound[1].openFromFile("assets/sounds/egy map sound .wav"))
         {
             cout << "ERROR: Can't load egy map sound .wav\n";
             return false;
         }
 
-        if (!sound[2].openFromFile("snow map spell.wav")) {
+        if (!sound[2].openFromFile("assets/sounds/snow map spell.wav")) {
             cout << "ERROR: Can't load snow map spell.wav\n";
             return false;
         }
 
-        if (!sound[3].openFromFile("lib sound map.wav")) {
+        if (!sound[3].openFromFile("assets/sounds/lib sound map.wav")) {
             cout << "ERROR: Can't load lib sound map.wav\n";
             return false;
         }
 
-        if (!sound[10].openFromFile("freeze.wav")) {
+        if (!sound[10].openFromFile("assets/sounds/freeze.wav")) {
             cout << "ERROR: Can't load freeze.wav\n";
             return false;
         }
-        if (!sound[11].openFromFile("damage spell.wav")) {
+        if (!sound[11].openFromFile("assets/sounds/damage spell.wav")) {
             cout << "ERROR: Can't load damage spell.wav\n";
             return false;
-        }  if (!sound[4].openFromFile("Meteor map.wav"))
+        }  if (!sound[4].openFromFile("assets/sounds/Meteor map.wav"))
         {
             cout << "ERROR: Can't load egy map sound .wav\n";
             return false;
         }
-        if (!sound[5].openFromFile("forest map.wav")) {
+        if (!sound[5].openFromFile("assets/sounds/forest map.wav")) {
             cout << "ERROR: Can't load forest map.wav\n";
             return false;
         }
-        if (!sound[6].openFromFile("Bats map.wav")) {
+        if (!sound[6].openFromFile("assets/sounds/Bats map.wav")) {
             cout << "ERROR: Can't load Bats map.wav\n";
             return false;
         }
-        if (!sound[7].openFromFile("wimmers.wav")) {
+        if (!sound[7].openFromFile("assets/sounds/wimmers.wav")) {
             cout << "ERROR: Can't load wimmers.wav\n";
             return false;
         }
-        if (!sound[8].openFromFile("while typing.wav")) {
+        if (!sound[8].openFromFile("assets/sounds/while typing.wav")) {
             cout << "ERROR: Can't load while typing.wav\n";
             return false;
         }
-        if (!sound[9].openFromFile("burn map.wav"))
+        if (!sound[9].openFromFile("assets/sounds/burn map.wav"))
         {
             cout << "ERROR: Can't load burn map .wav\n";
             return false;
         }
-        if (!sound[12].openFromFile("Dragon map.wav"))
+        if (!sound[12].openFromFile("assets/sounds/Dragon map.wav"))
         {
             cout << "ERROR: Can't load Dragon map.wav\n";
             return false;
         }
-        if (!sound[13].openFromFile("reh map.wav"))
+        if (!sound[13].openFromFile("assets/sound/reh map.wav"))
         {
             cout << "ERROR: Can't load reh map.wav\n";
             return false;
@@ -635,7 +635,7 @@ int main() {
     int pagenum = 1000; // Index for choosing
     Menu menu(1920, 1080);
     Texture mainmenubg;
-    if (!mainmenubg.loadFromFile("menu main.jpg")) {
+    if (!mainmenubg.loadFromFile("assets/images/menu main.jpg")) {
         cout << "ERROR: Can't load menu main.jpg\n";
         system("pause");
         return -1;
@@ -704,7 +704,7 @@ void numphoto_checkMouseHover(RenderWindow& window, RectangleShape numplay[], in
 int Design(RenderWindow& window)
 {
     Texture background;
-    background.loadFromFile("Designers.jpg");  //background
+    background.loadFromFile("assets/images/Designers.jpg");  //background
     Sprite bg;
     bg.setTexture(background);
     Font font;
@@ -809,15 +809,15 @@ int instruction(RenderWindow& window, SoundManager& soundManagerr)
     Texture key[9];
 
 
-    key[0].loadFromFile("W.png");
-    key[1].loadFromFile("A.png");
-    key[2].loadFromFile("D.png");
-    key[3].loadFromFile("ctrl.png");
-    key[4].loadFromFile("UP.png");
-    key[5].loadFromFile("L.png");
-    key[6].loadFromFile("R.png");
-    key[7].loadFromFile("space.png");
-    key[8].loadFromFile("sad.png");
+    key[0].loadFromFile("assets/images/W.png");
+    key[1].loadFromFile("assets/images/A.png");
+    key[2].loadFromFile("assets/images/D.png");
+    key[3].loadFromFile("assets/images/ctrl.png");
+    key[4].loadFromFile("assets/images/UP.png");
+    key[5].loadFromFile("assets/images/L.png");
+    key[6].loadFromFile("assets/images/R.png");
+    key[7].loadFromFile("assets/images/space.png");
+    key[8].loadFromFile("assets/images/sad.png");
 
     for (int i = 0; i < 4; i++)
     {
@@ -919,7 +919,7 @@ int instruction(RenderWindow& window, SoundManager& soundManagerr)
     Sprite muteSprite1;
     Sprite muteSprite2;
 
-    if (!unmutedTexture.loadFromFile("unmute.png")) {
+    if (!unmutedTexture.loadFromFile("assets/images/unmute.png")) {
         cout << "ERROR: Can't load unmute.png\n";
         return false;
     }
@@ -927,7 +927,7 @@ int instruction(RenderWindow& window, SoundManager& soundManagerr)
     unmuteSprite.setPosition(50, 850);
     unmuteSprite.scale(1.5, 1.5);
 
-    if (!mutedTexture1.loadFromFile("mute2.png")) {
+    if (!mutedTexture1.loadFromFile("assets/images/mute2.png")) {
         cout << "ERROR: Can't load unmute.png\n";
         return false;
     }
@@ -935,7 +935,7 @@ int instruction(RenderWindow& window, SoundManager& soundManagerr)
     muteSprite1.setPosition(50, 850);
     muteSprite1.scale(1.5, 1.5);
 
-    if (!mutedTexture.loadFromFile("mute.png")) {
+    if (!mutedTexture.loadFromFile("assets/images/mute.png")) {
         cout << "ERROR: Can't load mute.png\n";
         return false;
     }
@@ -943,7 +943,7 @@ int instruction(RenderWindow& window, SoundManager& soundManagerr)
     muteSprite.setPosition(50, 850);
     muteSprite.scale(1.5, 1.5);
 
-    if (!mutedTexture2.loadFromFile("mute1.png")) {
+    if (!mutedTexture2.loadFromFile("assets/images/mute1.png")) {
         cout << "ERROR: Can't load mute.png\n";
         return false;
     }
@@ -1081,8 +1081,8 @@ void Name_player(RenderWindow& window, string& Pname1, string& Pname2, SoundMana
 
 
     Texture background1, background2;
-    background1.loadFromFile("VS.png");
-    background2.loadFromFile("VS2.png");
+    background1.loadFromFile("assets/images/VS.png");
+    background2.loadFromFile("assets/images/VS2.png");
     Sprite bg1, bg2;
     bg1.setTexture(background1);
     bg2.setTexture(background2);
@@ -1090,7 +1090,7 @@ void Name_player(RenderWindow& window, string& Pname1, string& Pname2, SoundMana
     bg2.setScale(2, 2);
 
     Texture random;
-    random.loadFromFile("random.png");
+    random.loadFromFile("assets/images/random.png");
     Sprite ran[2];
     for (int i = 0; i < 2; i++)
     {
@@ -1146,14 +1146,13 @@ void Name_player(RenderWindow& window, string& Pname1, string& Pname2, SoundMana
     player1.numberplayer = -1;
     player2.numberplayer = -1;
 
-    numplayer1[0].loadFromFile("player1.png");
-    numplayer1[1].loadFromFile("player2.png");
-    numplayer1[2].loadFromFile("player3.png");
-    numplayer1[3].loadFromFile("player4.png");
-    numplayer2[0].loadFromFile("player1.png");
-    numplayer2[1].loadFromFile("player2.png");
-    numplayer2[2].loadFromFile("player3.png");
-    numplayer2[3].loadFromFile("player4.png");
+    numplayer1[1].loadFromFile("assets/images/player2.png");
+    numplayer1[2].loadFromFile("assets/images/player3.png");
+    numplayer1[3].loadFromFile("assets/images/player4.png");
+    numplayer2[0].loadFromFile("assets/images/player1.png");
+    numplayer2[1].loadFromFile("assets/images/player2.png");
+    numplayer2[2].loadFromFile("assets/images/player3.png");
+    numplayer2[3].loadFromFile("assets/images/player4.png");
 
     for (int i = 0; i < 4; i++)
     {
@@ -1172,7 +1171,7 @@ void Name_player(RenderWindow& window, string& Pname1, string& Pname2, SoundMana
     fontmaxround.loadFromFile("font numbers.ttf");
     Text Maxround[3];
     Texture line;
-    line.loadFromFile("line.png");
+    line.loadFromFile("assets/images/line.png");
     Sprite Line;
     Line.setTexture(line);
     Line.setPosition(700, 903);
@@ -1204,10 +1203,10 @@ void Name_player(RenderWindow& window, string& Pname1, string& Pname2, SoundMana
         points[i].setPosition(startX + i * spacing, startY);
     }
     Texture Round[4];
-    Round[0].loadFromFile("round1.png");
-    Round[1].loadFromFile("round3.png");
-    Round[2].loadFromFile("round5.png");
-    Round[3].loadFromFile("infinity.png");
+    Round[0].loadFromFile("assets/images/round1.png");
+    Round[1].loadFromFile("assets/images/round3.png");
+    Round[2].loadFromFile("assets/images/round5.png");
+    Round[3].loadFromFile("assets/images/infinity.png");
     Sprite round[4];
     for (int i = 0; i < 4; i++)
     {
@@ -1714,7 +1713,7 @@ void playmenu_checkMouseHover(RenderWindow& window, Text options[], int& selecte
 int playmenu(RenderWindow& window, int& mutenumber, SoundManager& soundManagerr)
 {
     Texture background;
-    background.loadFromFile("menu play.jpg");
+    background.loadFromFile("assets/images/menu play.jpg");
     Sprite bg;
     bg.setTexture(background);
     bg.setColor(Color(255, 255, 255, 128));
@@ -1844,7 +1843,7 @@ void Round(RenderWindow& window, int& Character1, int& Character2, int& rounds, 
 
 
     Texture background;
-    background.loadFromFile("Winnerr.jpg");
+    background.loadFromFile("assets/images/Winnerr.jpg");
     Sprite bg;
 
     bg.setTexture(background);
@@ -2083,7 +2082,7 @@ int Game_Play(RenderWindow& window, int& mutenumber, SoundManager& soundManagerr
 
     //health
     Texture healthTexture;
-    healthTexture.loadFromFile("health.png");
+    healthTexture.loadFromFile("assets/images/health.png");
     int Character1 = 0;
     int Character2 = 0;
 
@@ -2807,18 +2806,18 @@ void moveAndSwapBlocks(RenderWindow& w) {
 //predrawing1 function that is a function set the texture to background, ground, gates and blocks for map1. "RAAAAAAAAAAna"
 void preDrawing1(RenderWindow& w) {
     // background map1
-    mapp[0].background_texture.loadFromFile(("Background finalllll.jpg"));
+    mapp[0].background_texture.loadFromFile(("assets/images/Background finalllll.jpg"));
     mapp[0].background_sprite.setTexture(mapp[0].background_texture);
 
     // ground map1
-    mapp[0].ground_texture.loadFromFile("groundffpng.png");
+    mapp[0].ground_texture.loadFromFile("assets/images/groundffpng.png");
     mapp[0].ground_sprite.setTexture(mapp[0].ground_texture);
     mapp[0].ground_sprite.setPosition(-100, 1030);
 
     mapp[0].ground_sprite.setScale(3, .2);
 
     // gates
-    mapp[0].gates_texture.loadFromFile("gatessprite.png");
+    mapp[0].gates_texture.loadFromFile("assets/images/gatessprite.png");
     for (int i = 0; i < 4; ++i) {
         mapp[0].gates_sprite[i].setTexture(mapp[0].gates_texture);
         mapp[0].gates_sprite[i].setTextureRect(IntRect(0, 0, 144, 144));
@@ -2828,7 +2827,7 @@ void preDrawing1(RenderWindow& w) {
     }
 
     // blocks
-    mapp[0].blocks_texture.loadFromFile("blockk.png");
+    mapp[0].blocks_texture.loadFromFile("assets/images/blockk.png");
     for (int i = 0; i < 10; ++i) {
         mapp[0].blocks_sprite[i].setTexture(mapp[0].blocks_texture);
     }
@@ -2839,17 +2838,17 @@ void preDrawing1(RenderWindow& w) {
 //predrawing2 function that is a function set the texture to background, ground, gates and blocks for map2  "Reham".
 void preDrawing2(RenderWindow& w) {
     // background
-    mapp[1].background_texture.loadFromFile("baaaa2.png");
+    mapp[1].background_texture.loadFromFile("assets/images/baaaa2.png");
     mapp[1].background_sprite.setTexture(mapp[1].background_texture);
 
     // ground
-    mapp[1].ground_texture.loadFromFile("groundd.png");
+    mapp[1].ground_texture.loadFromFile("assets/images/groundd.png");
     mapp[1].ground_sprite.setTexture(mapp[1].ground_texture);
     mapp[1].ground_sprite.setPosition(1, 1020);
     mapp[1].ground_sprite.setScale(3, 1);
 
     // gates
-    mapp[1].gates_texture.loadFromFile("gatess2.png");
+    mapp[1].gates_texture.loadFromFile("assets/images/gatess2.png");
     for (int i = 0; i < 4; ++i) {
         mapp[1].gates_sprite[i].setTexture(mapp[1].gates_texture);
         mapp[1].gates_sprite[i].setTextureRect(IntRect(0, 0, 146, 96));
@@ -2858,7 +2857,7 @@ void preDrawing2(RenderWindow& w) {
     }
 
     // blocks
-    mapp[1].blocks_texture.loadFromFile("block2.png");
+    mapp[1].blocks_texture.loadFromFile("assets/images/block2.png");
     for (int i = 0; i < 14; ++i) {
         mapp[1].blocks_sprite[i].setTexture(mapp[1].blocks_texture);
 
@@ -2869,17 +2868,17 @@ void preDrawing2(RenderWindow& w) {
 void preDrawing3(RenderWindow& w) {
 
     //ground_properties
-    mapp[2].ground_texture.loadFromFile("group1.png");
+    mapp[2].ground_texture.loadFromFile("assets/images/group1.png");
     mapp[2].ground_sprite.setTexture(mapp[2].ground_texture);
     mapp[2].ground_sprite.setPosition(0, 1040);
 
     //back
-    mapp[2].background_texture.loadFromFile("back (1).jpg");
+    mapp[2].background_texture.loadFromFile("assets/images/back (1).jpg");
     mapp[2].background_sprite.setTexture(mapp[2].background_texture);
 
 
     //gate
-    mapp[2].gates_texture.loadFromFile("group 3.png");
+    mapp[2].gates_texture.loadFromFile("assets/images/group 3.png");
 
     for (int i = 0; i < 1; i++) {
         mapp[2].gates_sprite[i].setTexture(mapp[2].gates_texture);
@@ -2889,7 +2888,7 @@ void preDrawing3(RenderWindow& w) {
 
     //blocks
 
-    mapp[2].blocks_texture.loadFromFile("Layergate2.png");
+    mapp[2].blocks_texture.loadFromFile("assets/images/Layergate2.png");
     for (int i = 0; i < 10; i++) {
 
         mapp[2].blocks_sprite[i].setTexture(mapp[2].blocks_texture);
@@ -2908,12 +2907,12 @@ void preDrawing4(RenderWindow& w)
     //mapp[3].background_texture.loadFromFile("_91eb4006-d27d-4081-b544-010c70ad261e (1).jpeg");
 
     // background
-    mapp[3].background_texture.loadFromFile("_5047880d-598a-42aa-8040-7f363ddafbeb (1).jpeg");
+    mapp[3].background_texture.loadFromFile("assets/images/_5047880d-598a-42aa-8040-7f363ddafbeb (1).jpeg");
     mapp[3].background_sprite.setTexture(mapp[3].background_texture);
 
 
     // ground
-    mapp[3].ground_texture.loadFromFile("grounddd4 (1).PNG");
+    mapp[3].ground_texture.loadFromFile("assets/images/grounddd4 (1).PNG");
     mapp[3].ground_sprite.setTexture(mapp[3].ground_texture);
     mapp[3].ground2.setTexture(mapp[3].ground_texture);
     mapp[3].ground_sprite.setPosition(1, 833);
@@ -2927,11 +2926,11 @@ void preDrawing4(RenderWindow& w)
 
 
 
-    mapp[3].blocks_texture.loadFromFile("the black one (1).png");
+    mapp[3].blocks_texture.loadFromFile("assets/images/the black one (1).png");
 
-    mapp[3].blocks2_texture.loadFromFile("the red one (1).png");
+    mapp[3].blocks2_texture.loadFromFile("assets/images/the red one (1).png");
 
-    mapp[3].blocks3_texture.loadFromFile("the black one (1) (1).png");
+    mapp[3].blocks3_texture.loadFromFile("assets/images/the black one (1) (1).png");
 
 
 
@@ -2965,7 +2964,7 @@ void preDrawing4(RenderWindow& w)
     //setting tex and sprite for the dragon 
     for (int i = 0; i < 2; i++)
     {
-        Dragon[i].dragon_tex.loadFromFile("dragon1.png");
+        Dragon[i].dragon_tex.loadFromFile("assets/images/dragon1.png");
         Dragon[i].dragon_sprite.setTexture(Dragon[i].dragon_tex);
 
 
@@ -2986,19 +2985,19 @@ void preDrawing4(RenderWindow& w)
 void preDrawing5(RenderWindow& w) {
 
     //ground_properties
-    mapp[4].ground_texture.loadFromFile("block6.png");
+    mapp[4].ground_texture.loadFromFile("assets/images/block6.png");
     mapp[4].ground_sprite.setTexture(mapp[4].ground_texture);
     mapp[4].ground_sprite.setPosition(-150, 1040);
     mapp[4].ground_sprite.setScale(8, 1);
 
     //back
-    mapp[4].background_texture.loadFromFile("map3.png");
+    mapp[4].background_texture.loadFromFile("assets/images/map3.png");
     mapp[4].background_sprite.setTexture(mapp[4].background_texture);
 
 
     //gate
-    mapp[4].gates_texture.loadFromFile("rocket1.png");
-    mapp[4].rocket_texture.loadFromFile("rocket2.png");
+    mapp[4].gates_texture.loadFromFile("assets/images/rocket1.png");
+    mapp[4].rocket_texture.loadFromFile("assets/images/rocket2.png");
     mapp[4].gates_sprite[0].setTexture(mapp[4].gates_texture);
     mapp[4].gates_sprite[1].setTexture(mapp[4].rocket_texture);
     mapp[4].gates_sprite[0].setPosition(2200, 50);
@@ -3009,7 +3008,7 @@ void preDrawing5(RenderWindow& w) {
         mapp[4].gates_sprite[i].setRotation(-10 + 20 * i);
         mapp[4].gates_sprite[i].setScale(0.5, 0.5);
     }
-    mapp[4].meteorTexture.loadFromFile("meteor.png");
+    mapp[4].meteorTexture.loadFromFile("assets/images/meteor.png");
     for (int i = 0; i < 5; i++)
     {
         mapp[4].gates_sprite[i + 2].setTexture(mapp[4].meteorTexture);
@@ -3019,7 +3018,7 @@ void preDrawing5(RenderWindow& w) {
 
     //blocks
 
-    mapp[4].blocks_texture.loadFromFile("block6.png");
+    mapp[4].blocks_texture.loadFromFile("assets/images/block6.png");
     for (int i = 0; i < 11; i++)
     {
 
@@ -3032,22 +3031,22 @@ void preDrawing5(RenderWindow& w) {
 
 void preDrawing6(RenderWindow& w) {
 
-    mapp[5].background_texture.loadFromFile(("back4.png"));
+    mapp[5].background_texture.loadFromFile(("assets/images/back4.png"));
     mapp[5].background_sprite.setTexture(mapp[5].background_texture);
 
 
 
-    mapp[5].ground_texture.loadFromFile("Group 1.png");
+    mapp[5].ground_texture.loadFromFile("assets/images/Group 1.png");
     mapp[5].ground_sprite.setTexture(mapp[5].ground_texture);
     mapp[5].ground_sprite.setPosition(0, 1050);
 
 
     mapp[5].blocks_sprite[4].setTexture(mapp[5].branches_texture[1]);
     mapp[5].blocks_sprite[5].setTexture(mapp[5].branches_texture[0]); //right
-    mapp[5].branches_texture[2].loadFromFile("l up branch.png");
+    mapp[5].branches_texture[2].loadFromFile("assets/images/l up branch.png");
     mapp[5].blocks_sprite[6].setTexture(mapp[5].branches_texture[2]);
 
-    mapp[5].blocks_texture.loadFromFile("Group 1b.png");
+    mapp[5].blocks_texture.loadFromFile("assets/images/Group 1b.png");
     for (int i = 0; i < 3; ++i) {
         mapp[5].blocks_sprite[i].setTexture(mapp[5].blocks_texture);
     }
@@ -3629,12 +3628,12 @@ void Meteordamage(RenderWindow& window, Vector2f endPos[], bool& shackdamage1, b
     static int countdamage1 = 0, countdamage2 = 0;
     if (!texturesLoaded)
     {
-        if (!meteordamage1.loadFromFile("damage1.png")) {
+        if (!meteordamage1.loadFromFile("assets/images/damage1.png")) {
             std::cerr << "Error loading damage1.png" << std::endl;
             system("pause");
             return;
         }
-        if (!meteordamage2.loadFromFile("damage2.png")) {
+        if (!meteordamage2.loadFromFile("assets/images/damage2.png")) {
             std::cerr << "Error loading damage2.png" << std::endl;
             return;
         }
@@ -3880,7 +3879,7 @@ void draw2(RenderWindow& w, Sprite back, Sprite ground, Sprite ground2, Sprite d
 }
 
 void enemy_things(RenderWindow& w, Sprite enemy_sprite) {
-    if (!enemy_tex.loadFromFile("enemy.png")) {
+    if (!enemy_tex.loadFromFile("assets/images/enemy.png")) {
         cerr << "Error loading enemy texture" << endl;
         return;
     }
@@ -4137,16 +4136,16 @@ void CheckCollision(bool& isGrounded){
 
 void spelldefine()
 {
-    spellstex[0].loadFromFile("leaf.png");
-    spellstex[1].loadFromFile("sad.png");
-    spellstex[2].loadFromFile("egg.png");
-    spellstex[3].loadFromFile("sad.png");
-    spellstex[4].loadFromFile("lightning.png");
-    spellstex[5].loadFromFile("Water.png");
-    spellstex[6].loadFromFile("net.png");
-    spellstex[7].loadFromFile("fair.png");
-    spellstex[8].loadFromFile("shield 3.png");// for shield tex
-    spellstex[9].loadFromFile("freeze sprite.png");  // freeze 
+    spellstex[0].loadFromFile("assets/images/leaf.png");
+    spellstex[1].loadFromFile("assets/images/sad.png");
+    spellstex[2].loadFromFile("assets/images/egg.png");
+    spellstex[3].loadFromFile("assets/images/sad.png");
+    spellstex[4].loadFromFile("assets/images/lightning.png");
+    spellstex[5].loadFromFile("assets/images/Water.png");
+    spellstex[6].loadFromFile("assets/images/net.png");
+    spellstex[7].loadFromFile("assets/images/fair.png");
+    spellstex[8].loadFromFile("assets/images/shield 3.png");// for shield tex
+    spellstex[9].loadFromFile("assets/images/freeze sprite.png");  // freeze 
 
 
     for (int i = 0; i < 4; i++)
@@ -4865,29 +4864,29 @@ void effct1(RenderWindow& w)
     static int blinkCount = 0;
     if (!texturesLoaded)
     {
-        if (!Drawsplls[0].loadFromFile("effect lighting.png"))
+        if (!Drawsplls[0].loadFromFile("assets/images/effect lighting.png"))
         {
             cerr << "Error loading damage1.png" << endl;
         }
         drawsplls[0].scale(0.2, 0.2);
 
-        if (!Drawsplls[1].loadFromFile("effect fire.png"))
+        if (!Drawsplls[1].loadFromFile("assets/images/effect fire.png"))
         {
             cout << "Error loading damage1.png" << endl;
         }
         drawsplls[1].scale(0.5, 0.5);
 
-        if (!Drawsplls[2].loadFromFile("effect Water.png"))
+        if (!Drawsplls[2].loadFromFile("assets/images/effect Water.png"))
         {
             cout << "Error loading damage1.png" << endl;
         }
         drawsplls[2].scale(0.9, 0.9);
-        if (!Drawsplls[3].loadFromFile("effect freeze.png"))
+        if (!Drawsplls[3].loadFromFile("assets/images/effect freeze.png"))
         {
             cout << "Error loading damage1.png" << endl;
         }
         drawsplls[3].scale(1.4, 1.4);
-        if (!Drawsplls[4].loadFromFile("effcet net.png"))
+        if (!Drawsplls[4].loadFromFile("assets/images/effcet net.png"))
         {
             cout << "Error loading damage1.png" << endl;
         }
@@ -5099,29 +5098,29 @@ void effct2(RenderWindow& w)
     static int blinkCount = 0;
     if (!texturesLoaded)
     {
-        if (!Drawsplls[0].loadFromFile("effect lighting.png"))
+        if (!Drawsplls[0].loadFromFile("assets/images/effect lighting.png"))
         {
             cerr << "Error loading damage1.png" << endl;
         }
         drawsplls[0].scale(0.2, 0.2);
 
-        if (!Drawsplls[1].loadFromFile("effect fire.png"))
+        if (!Drawsplls[1].loadFromFile("assets/images/effect fire.png"))
         {
             cout << "Error loading damage1.png" << endl;
         }
         drawsplls[1].scale(0.5, 0.5);
 
-        if (!Drawsplls[2].loadFromFile("effect Water.png"))
+        if (!Drawsplls[2].loadFromFile("assets/images/effect Water.png"))
         {
             cout << "Error loading damage1.png" << endl;
         }
         drawsplls[2].scale(0.9, 0.9);
-        if (!Drawsplls[3].loadFromFile("effect freeze.png"))
+        if (!Drawsplls[3].loadFromFile("assets/images/effect freeze.png"))
         {
             cout << "Error loading damage1.png" << endl;
         }
         drawsplls[3].scale(1.4, 1.4);
-        if (!Drawsplls[4].loadFromFile("effcet net.png"))
+        if (!Drawsplls[4].loadFromFile("assets/images/effcet net.png"))
         {
             cout << "Error loading damage1.png" << endl;
         }
