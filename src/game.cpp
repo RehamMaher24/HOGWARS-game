@@ -756,7 +756,7 @@ int Design(RenderWindow& window)
             }
             if (event.type == Event::KeyPressed && event.key.code == Keyboard::Escape)
             {
-                return 1000; // «·⁄Êœ… ≈·Ï «·ﬁ«∆„…
+                return 1000; // √á√°√ö√¶√è√â √Ö√°√¨ √á√°√û√á√Ü√£√â
             }
         }
         if (event.type == Event::MouseMoved)
@@ -3369,7 +3369,7 @@ void moveRocket(Vector2f targetPosition[], float speed, Time stopTime[], int& co
         sf::Vector2f direction = targetPosition[0] - mapp[4].gates_sprite[0].getPosition();
         float distance = sqrt(direction.x * direction.x + direction.y * direction.y);
         if (distance > speed * deltaTime[0].asSeconds()) {
-            direction /= distance; // «·Õ’Ê· ⁄·Ï «·ÊÕœ… «·« Ã«ÂÌ…
+            direction /= distance; // √á√°√ç√ï√¶√° √ö√°√¨ √á√°√¶√ç√è√â √á√°√á√ä√å√á√•√≠√â
             mapp[4].gates_sprite[0].move(direction * speed * deltaTime[0].asSeconds());
         }
         else {
@@ -3410,7 +3410,7 @@ void moveRocket(Vector2f targetPosition[], float speed, Time stopTime[], int& co
         Vector2f direction = targetPosition[1] - mapp[4].gates_sprite[1].getPosition();
         float distance = sqrt(direction.x * direction.x + direction.y * direction.y);
         if (distance > speed * deltaTime[1].asSeconds()) {
-            direction /= distance; // «·Õ’Ê· ⁄·Ï «·ÊÕœ… «·« Ã«ÂÌ…
+            direction /= distance; // √á√°√ç√ï√¶√° √ö√°√¨ √á√°√¶√ç√è√â √á√°√á√ä√å√á√•√≠√â
             mapp[4].gates_sprite[1].move(direction * speed * deltaTime[1].asSeconds());
         }
         else {
